@@ -1,0 +1,45 @@
+/* HECTOR YABES */
+/* yab3.dev */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#logo {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: monospace;
+}
+
+#key {
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-family: monospace;
+  width: 300px;
+  border: 1px solid #000;
+  outline: none;
+}
+
+#key:focus {
+  border: 2px solid #000;
+}
