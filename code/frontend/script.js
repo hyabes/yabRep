@@ -8,6 +8,7 @@ const routes = {
   help: 'help.txt',
   resume: 'resume.html',
   sophia: 'sophia.html',
+  jellyfin: `http://${window.location.hostname}:8096`,
 };
 
 // --------------------

@@ -24,6 +24,19 @@ services:
     networks:
       - yab3_network
 
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: yab3_jellyfin_1
+    ports:
+      - "8096:8096"
+    volumes:
+      - /home/yab/jellyfin/config:/config
+      - /home/yab/jellyfin/cache:/cache
+      - /home/yab/jellyfin/media:/media
+    networks:
+      - yab3_network
+    restart: unless-stopped
+
   nginx:
     image: nginx:alpine
     container_name: yab3_nginx_1
