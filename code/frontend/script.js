@@ -1,5 +1,6 @@
 // HECTOR YABES
 // yab3.dev
+// script.js
 
 // --------------------
 // ROUTES / COMMANDS
@@ -8,7 +9,7 @@ const routes = {
   help: 'help.txt',
   resume: 'resume.html',
   sophia: 'sophia.html',
-  jellyfin: `http://${window.location.hostname}:8096`,
+  jellyfin: 'https://jellyfin.yab3.dev',
 };
 
 // --------------------
@@ -46,7 +47,6 @@ input.addEventListener('keydown', (e) => {
       window.location.href = target;
     }
   }
-  // If invalid, do nothing - just cleared the input
 });
 
 // Focus input on page load
