@@ -1,5 +1,6 @@
 # Environment variables
 .env
+.admin_pass
 
 # Python
 __pycache__/

@@ -10,6 +10,7 @@ services:
       - pgdata:/var/lib/postgresql/data
     networks:
       - yab3_network
+    restart: unless-stopped
 
   flask:
     build: .
@@ -21,18 +22,6 @@ services:
       SECRET_KEY: ${SECRET_KEY}
     volumes:
       - ./code/backend:/app
-    networks:
-      - yab3_network
-
-  jellyfin:
-    image: jellyfin/jellyfin:latest
-    container_name: yab3_jellyfin_1
-    ports:
-      - "8096:8096"
-    volumes:
-      - /home/yab/jellyfin/config:/config
-      - /home/yab/jellyfin/cache:/cache
-      - /home/yab/jellyfin/media:/media
     networks:
       - yab3_network
     restart: unless-stopped
@@ -47,6 +36,7 @@ services:
     volumes:
       - ./code/frontend:/usr/share/nginx/html
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./logs/nginx:/var/log/nginx
     networks:
       - yab3_network
     restart: unless-stopped

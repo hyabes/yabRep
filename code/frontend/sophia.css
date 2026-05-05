@@ -1,0 +1,21 @@
+/* HECTOR YABES */
+/* yab3.dev */
+/* sophia.css */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #6b6258;
+}
+
+img {
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
+}
