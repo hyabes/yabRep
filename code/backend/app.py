@@ -12,6 +12,7 @@ from dotenv import load_dotenv           # reads .env
 load_dotenv()
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
 CORS(app, origins=['https://yab3.dev'])
 
 # Database
